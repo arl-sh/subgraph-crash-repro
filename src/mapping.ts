@@ -1,5 +1,8 @@
+import { Address } from '@graphprotocol/graph-ts';
 import { NewGravatar, UpdatedGravatar } from '../generated/Gravity/Gravity';
 import { Gravatar } from '../generated/schema';
+
+Address.fromString("0x0000000000000000000000000000000000000000");
 
 export function handleNewGravatar(event: NewGravatar): void {
   let gravatar = new Gravatar(event.params.id.toHex());
